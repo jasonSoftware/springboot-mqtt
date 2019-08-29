@@ -1,0 +1,23 @@
+spring:
+  mqtt:
+    url: tcp://127.0.0.1:1883
+    client:
+      id: stock-producer
+    default:
+      topic: stock-topic
+    completionTimeout: 3000
+    Qos : 2
+    userName : test
+    password : test
+  rabbitmq:
+    host: 127.0.0.1
+    port: 1883
+    username: zxm
+    password: zxm
+    publisher-confirms: true
+
+server:
+   port: 8091
+   connection-timeout: 30000ms
+   servlet:
+      context-path: /mqtt-producer

@@ -1,0 +1,16 @@
+spring:
+  mqtt:
+    url: tcp://127.0.0.1:1883
+    client:
+      id: stock-consumer-8083
+    default:
+      topic: stock
+    completionTimeout: 3000
+    Qos : 2
+    userName : test
+    password : test
+server:
+   port: 8093
+   connection-timeout: 30000ms
+   servlet:
+      context-path: /mqtt-consumer   
